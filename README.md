@@ -1,1 +1,1 @@
-# data-exploration
+# LG Aimers 5기

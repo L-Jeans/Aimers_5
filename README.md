@@ -5,14 +5,14 @@
 ### 팀원
 |<img src="https://github.com/user-attachments/assets/b9b80871-f024-4906-86a4-7586cf4c6fcf" width="170" />|<img src="https://github.com/user-attachments/assets/b9b80871-f024-4906-86a4-7586cf4c6fcf" width="170" />|<img src="https://github.com/user-attachments/assets/b9b80871-f024-4906-86a4-7586cf4c6fcf" width="170" />|<img src="https://github.com/user-attachments/assets/b9b80871-f024-4906-86a4-7586cf4c6fcf" width="170" />|<img src="https://github.com/user-attachments/assets/b9b80871-f024-4906-86a4-7586cf4c6fcf" width="170" />|
 |:---------:|:---------:|:---------:|:---------:|:---------:|
-|김창우|[👑박인애](https://github.com/inaemon)|[신진영](https://github.com/novicedata)|[이현우](https://github.com/seungwoo0512)|이현주|
+|김창우|[👑박인애](https://github.com/inaemon)|[신진영](https://github.com/novicedata)|[이승우](https://github.com/seungwoo0512)|이현주|
 
-</br>
+<br/>
 
 ## 🚀 프로젝트 소개
 ### 프로젝트명: 제품 이상 여부 판별 프로젝트
 
-</br>
+<br/>
 
 ## 🚀 세션 기간
 ### Phase I. 온라인 AI 교육
@@ -21,7 +21,7 @@
 ### Phase II. 온라인 해커톤
 2024.08.01 ~ 2024.08.30
 
-</br>
+<br/>
 
 ## 🚀 주최 기관
 - 고용노동부
@@ -31,7 +31,83 @@
 - 엘리스코딩
 - LG AI 연구원
 
-</br>
+<br/>
+
+
+## 🌟 도메인 지식
+### 공정 유형
+- 차량 디스플레이 생산
+- Sub Assembly Line
+### 공정 과정
+- Dam(레진도포&반경화)  →  AutoClave(탈포)  →  Fill1(내측도포)  →  Fill2(UV경화)
+- 합착, 완전 경화 공정에 대한 데이터셋은 주어지지 않아서 생산 과정에서 일어나는 모든 불량 유형을 예측할 수 없음
+### 불량 유형
+- 이물, 기포, Misalign, Crack, Broken, Dirty, …
+- 주어진 데이터셋에 불량 유형을 명시한 라벨은 없음
+
+<br/>
+
+
+## 🌈 데이터 특징
+### 데이터 개수
+- 학습 데이터셋: 40506 rows
+- 테스트 데이터셋: 17361 rows
+- 컬럼 수: 464 columns
+### 이진 분류
+- Normal
+- AbNormal
+### 불균형 데이터
+- Normal: 38156, AbNormal: 2350
+### 기타 EDA 결과
+- 겉으론 수치값이지만 대부분 범주형 데이터
+- 범주형 데이터 처리에 효과적인 CatBoost가 ML 중 가장 성능이 높았음
+- 결측값이 많음
+- 좌표 컬럼 외에 상관관계가 낮음
+### 데이터 형식
+- csv 파일
+
+<br/>
+
+## 🤖 모델
+**Ensemble Learning Soft Voting**
+<table>
+  <tr>
+    <td align="center"><b>CatBoost</b></td>
+    <td align="center"><b>XGBoost</b></td>
+    <td align="center"><b>GradientBoost</b></td>
+    <td align="center"><b>LightGBM</b></td>
+    <td align="center"><b>RandomForest</b></td>
+  </tr>
+</table>
+
+<br/>
+
+## 💎 사용 기술 및 연구 내역
+### 전처리
+- 결측치 처리
+- 이상치 처리
+- 인코딩
+- 다중공선성 제거
+- 공정 별 중복 데이터 처리
+- 불균형 데이터 처리
+- 데이터 증강
+- 정규화
+- 스케일링
+- PCA, UMAP
+### 피쳐 스케일링
+- 변수 중요도 분석
+- 상관 관계 분석
+- 파생변수 생성
+- 변수 선택
+- 변수 순서 조정
+### 모델링
+- 교차검증
+- ML 앙상블
+- 하이퍼 파라미터 조정
+- Voting, Bagging, Boosting, Stacking 성능 비교
+- Overfitting 해결
+
+<br/>
 
 ## ✨ 기술 스택
 <table>
@@ -49,7 +125,7 @@
   </tr>
 </table>
 
-</br>
+<br/>
 
 ## ✨ 리더보드
 - Final Rank: 56등 / 740팀  **(Top 100 내 선정)**
@@ -65,7 +141,7 @@
   </tr>
 </table>
 
-</br>
+<br/>
 
 ## ✨ 발표자료
 ![스크린샷 2024-10-09 213720](https://github.com/user-attachments/assets/ccf53a8a-e328-4ea0-a2b3-d11e849e601a)
